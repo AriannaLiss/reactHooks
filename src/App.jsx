@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import useInput from './hooks/useInput';
+import React, { useRef, useState } from 'react';
+import ControlForm from './components/ControlForm';
+import Hover from './components/Hover';
+import useHover from './hooks/useHover';
 
 const App = () => {
-    const username = useInput('');
-    const password = useInput('');
 
     return (
         <div>
-            <input {...username} type="text" placeholder='Username'/>
-            <input {...password} type="password" placeholder='Password'/>
-            <button onClick={() => console.log(username.value, password.value)}>Click</button>
+            <ControlForm/>
+            <Hover/>
         </div>
     );
 };
