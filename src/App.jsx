@@ -1,14 +1,11 @@
-import React, { useRef, useState } from 'react';
-import ControlForm from './components/ControlForm';
-import Hover from './components/Hover';
-import useHover from './hooks/useHover';
+import React from 'react';
+import List from './components/List';
 
 const App = () => {
 
     return (
         <div>
-            <ControlForm/>
-            <Hover/>
+            <List/>
         </div>
     );
 };
