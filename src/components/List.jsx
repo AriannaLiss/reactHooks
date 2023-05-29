@@ -7,9 +7,10 @@ const List = () => {
     const [todos, setTodos] = useState([]);
     const [page, setPage] = useState(1);
     const limit = 10;
+    const url='https://jsonplaceholder.typicode.com/todos';
 
     const [getTodos, isLoading, error] = useFetching(async()=>{
-        const json = await get(page, limit);
+        const json = await get(url, page, limit);
         setTodos(prev => [...prev, ...json]);
         setPage(prev => prev + 1);
     })
